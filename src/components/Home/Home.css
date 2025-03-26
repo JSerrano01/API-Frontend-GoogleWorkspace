@@ -1,0 +1,225 @@
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.home-header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #b71c1c;
+}
+
+.home-logo-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.google-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.home-logo-title h1 {
+    color: #005652;
+    margin: 0;
+    font-size: 24px;
+}
+
+.home-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    background-color: #005652;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.main-button:hover {
+    background-color: #003d3a;
+    transform: translateY(-2px);
+}
+
+.main-button.active {
+    background-color: #003d3a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    margin-bottom: 20px;
+}
+
+.form-container.active {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    color: #005652;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-note {
+    font-style: italic;
+    color: #666;
+    margin: 15px 0;
+}
+
+.excel-instructions {
+    margin-bottom: 20px;
+}
+
+.excel-instructions .note {
+    color: #d32f2f;
+    font-size: 14px;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #005652;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #003d3a;
+}
+
+.submit-button {
+    background-color: #005652;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #003d3a;
+}
+
+.results-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.results-container h2 {
+    margin-top: 0;
+    color: #005652;
+}
+
+.results-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results-container li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #005652;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.submit-button:disabled:hover {
+    background-color: #cccccc;
+    transform: none;
+}
