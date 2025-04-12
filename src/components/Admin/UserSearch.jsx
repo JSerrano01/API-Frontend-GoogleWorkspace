@@ -27,7 +27,7 @@ const UserSearch = () => {
         try {
             const token = localStorage.getItem('token');
             const response = await fetch(
-                `http://localhost:8080/api/users/search?type=${searchType}&value=${encodeURIComponent(searchValue)}`,
+                /*`http://localhost:8080/api/users/search?type=${searchType}&value=${encodeURIComponent(searchValue)}`*/ `http://10.3.1.122:5000/api/users/search?type=${searchType}&value=${encodeURIComponent(searchValue)}`,
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`

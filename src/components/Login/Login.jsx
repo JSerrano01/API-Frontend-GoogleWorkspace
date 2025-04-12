@@ -24,7 +24,7 @@ const Login = ({ setAuthState }) => {
         setError('');
 
         try {
-            const response = await fetch('http://localhost:8080/api/login', {
+            const response = await fetch(/*'http://localhost:8080/api/login'*/ 'http://10.3.1.122:5000/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
