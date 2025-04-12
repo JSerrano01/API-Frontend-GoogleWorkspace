@@ -28,7 +28,7 @@ const EditUser = () => {
         const fetchUser = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch(`http://localhost:8080/api/admin/users/${userId}`, {
+                const response = await fetch(/*`http://localhost:8080/api/admin/users/${userId}`*/ `http://10.3.1.122:5000/api/admin/users/${userId}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -76,7 +76,7 @@ const EditUser = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:8080/api/admin/users/${userId}`, {
+            const response = await fetch(/*`http://localhost:8080/api/admin/users/${userId}`*/ `http://10.3.1.122:5000/api/admin/users/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -109,7 +109,7 @@ const EditUser = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:8080/api/admin/users/${userId}/reset-password`, {
+            const response = await fetch(/*`http://localhost:8080/api/admin/users/${userId}/reset-password`*/ `http://10.3.1.122:5000/api/admin/users/${userId}/reset-password`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -26,7 +26,7 @@ const Home = (setAuthState) => {
         const fetchPermissions = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch('http://localhost:8080/api/user/permissions', {
+                const response = await fetch(/*'http://localhost:8080/api/user/permissions'*/ 'http://10.3.1.122:5000/api/user/permissions', {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -107,7 +107,7 @@ const Home = (setAuthState) => {
                 return { exists: false };
             }
 
-            const response = await fetch('http://localhost:8080/api/users/check', {
+            const response = await fetch(/*'http://localhost:8080/api/users/check'*/ 'http://10.3.1.122:5000/api/users/check', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ const Home = (setAuthState) => {
                 return;
             }
 
-            const response = await fetch('http://localhost:8080/api/users/create', {
+            const response = await fetch(/*'http://localhost:8080/api/users/create'*/ 'http://10.3.1.122:5000/api/users/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -230,7 +230,7 @@ const Home = (setAuthState) => {
             const formData = new FormData();
             formData.append('file', excelFile);
 
-            const response = await fetch('http://localhost:8080/api/users/bulk-create', {
+            const response = await fetch(/*'http://localhost:8080/api/users/bulk-create'*/ 'http://10.3.1.122:5000/api/users/bulk-create', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -269,7 +269,7 @@ const Home = (setAuthState) => {
     const downloadTemplate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/download-template');
+            const response = await fetch(/*'http://localhost:8080/download-template'*/ 'http://10.3.1.122:5000/download-template');
             if (!response.ok) {
                 throw new Error('No se pudo descargar la plantilla');
             }
@@ -303,7 +303,7 @@ const Home = (setAuthState) => {
                 return;
             }
 
-            const response = await fetch('http://localhost:8080/api/users/create-with-existing-id', {
+            const response = await fetch(/*'http://localhost:8080/api/users/create-with-existing-id'*/ 'http://10.3.1.122:5000/api/users/create-with-existing-id', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
